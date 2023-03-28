@@ -3,10 +3,6 @@
   "version": "1.0.6",
   "description": "Yjs encoding protocols",
   "type": "module",
-  "funding": {
-    "type": "GitHub Sponsors ❤",
-    "url": "https://github.com/sponsors/dmonad"
-  },
   "files": [
     "dist/*",
     "auth.*",
@@ -25,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yjs/y-protocols.git"
+    "url": "git+https://github.com/rahutwr33/y-protocol-node14.git"
   },
   "keywords": [
     "Yjs"
   ],
-  "author": "Kevin Jahns <kevin.jahns@protonmail.com>",
+  "author": "Rahul Tiwari",
   "license": "MIT",
   "standard": {
     "ignore": [
