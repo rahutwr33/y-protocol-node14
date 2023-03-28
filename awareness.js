@@ -8,7 +8,7 @@ import * as time from 'lib0/time'
 import * as math from 'lib0/math'
 import { Observable } from 'lib0/observable'
 import * as f from 'lib0/function'
-import * as Y from 'yjs' // eslint-disable-line
+import * as Y from 'yjs-node14' // eslint-disable-line
 
 export const outdatedTimeout = 30000
 
@@ -40,7 +40,7 @@ export class Awareness extends Observable {
   /**
    * @param {Y.Doc} doc
    */
-  constructor (doc) {
+  constructor(doc) {
     super()
     this.doc = doc
     /**
@@ -81,7 +81,7 @@ export class Awareness extends Observable {
     this.setLocalState({})
   }
 
-  destroy () {
+  destroy() {
     this.emit('destroy', [this])
     this.setLocalState(null)
     super.destroy()
@@ -91,14 +91,14 @@ export class Awareness extends Observable {
   /**
    * @return {Object<string,any>|null}
    */
-  getLocalState () {
+  getLocalState() {
     return this.states.get(this.clientID) || null
   }
 
   /**
    * @param {Object<string,any>|null} state
    */
-  setLocalState (state) {
+  setLocalState(state) {
     const clientID = this.clientID
     const currLocalMeta = this.meta.get(clientID)
     const clock = currLocalMeta === undefined ? 0 : currLocalMeta.clock + 1
@@ -138,7 +138,7 @@ export class Awareness extends Observable {
    * @param {string} field
    * @param {any} value
    */
-  setLocalStateField (field, value) {
+  setLocalStateField(field, value) {
     const state = this.getLocalState()
     if (state !== null) {
       this.setLocalState({
@@ -151,7 +151,7 @@ export class Awareness extends Observable {
   /**
    * @return {Map<number,Object<string,any>>}
    */
-  getStates () {
+  getStates() {
     return this.states
   }
 }
